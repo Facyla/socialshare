@@ -39,6 +39,8 @@ More third-party services can be added provided they offer a RESTful API.
 
 ## History
 
+1.12.0 : Production version for Elgg 1.12
+
 1.8.0 : Production version for Elgg 1.8
 
 0.2 : 20140902 - First release
