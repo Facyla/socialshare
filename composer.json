@@ -1,6 +1,6 @@
 {
 	"name": "facyla/socialshare",
-	"version": "1.12",
+	"version": "2.3.0",
 	"type": "elgg-plugin",
 	"repositories": [
 		{
