@@ -13,16 +13,16 @@ The sharing menu appears only on public entities, ie. only those which have a "P
 The motiviation for that is that this plugin does not encourage sharing private resources. It considers that any non-public resource should not be shared to another group or made public without the author's consent (or the consent of the group it belongs to). Keep in mind that sharing a private resource can be considered as a leak and may be reprehensible. 
 
 However, if this is not an issue in your site's context, this behaviour can be easily overrided in your theme by overriding the 'register', 'menu:entity' hook with a custom one:
-  elgg_unregister_plugin_hook_handler('register', 'menu:entity', 'socialshare_entity_menu_setup');
-  elgg_register_plugin_hook_handler('register', 'menu:entity', 'mytheme_entity_menu_setup', 600);
+`elgg_unregister_plugin_hook_handler('register', 'menu:entity', 'socialshare_entity_menu_setup');
+`elgg_register_plugin_hook_handler('register', 'menu:entity', 'mytheme_entity_menu_setup', 600);
 then replace the following line with your own:
-  if ($entity->access_id == 2) {
+`if ($entity->access_id == 2) {
 could become, if you want to allow sharing any non-private entity:
-  if ($entity->access_id > 0) {
+`if ($entity->access_id > 0) {
 or to allow to share any resource (event private or draft):
-		//if ($entity->access_id == 2) {
-		...
-		//}
+`//if ($entity->access_id == 2) {
+`...
+`//}
 
 
 ## Plugin settings
